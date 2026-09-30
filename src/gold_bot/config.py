@@ -15,12 +15,16 @@ class BotConfig:
     account_balance: float = 10000.0
     leverage_cap: float = 5.0
     min_confidence: float = 0.55
-    take_profit_atr_mult: float = 2.0
-    stop_loss_atr_mult: float = 1.2
+    take_profit_atr_mult: float = 2.2
+    stop_loss_atr_mult: float = 1.3
     warmup_period: int = 100
     fee_pct: float = 0.0002
-    allowed_regimes: tuple[str, ...] = ("trend", "breakout")
+    allowed_regimes: tuple[str, ...] = ("trend", "breakout", "range")
     data_dir: str = "./data"
+    risk_mode: str = "balanced"
+    signal_threshold: float = 0.42
+    session_monitor: bool = True
+    mobile_dashboard: bool = True
 
 
 CONFIG = BotConfig()
